@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Pong</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="simple school project">
+	<meta name="keywords" content="javascript">
+	<meta name="author" content="Honza Kubis">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="formValidation.js"></script>
+</head>
+
+<body>
+	<img src="./img/logo.png" alt="play game">
+
+	<div class="w3-container">
+		<button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-red w3-large" id="getStartedButton">GET STARTED</button>
+
+		<div id="id01" class="w3-modal">
+			<div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px">
+
+				<div class="w3-center w3-black"><br>
+					<span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn w3-hover-red w3-container w3-padding-8 w3-display-topright"
+						title="Close Modal">&times;</span>
+					<img src="./img/avatar.jpg" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+				</div>
+
+				<form class="w3-container" action="game.html" id="login" name="form" onsubmit="return validateForm()">
+					<div class="w3-section">
+						<input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="username" required>
+						<input class="w3-input w3-border" type="password" placeholder="Enter Password" name="password" required>
+						<button class="w3-btn-block w3-red w3-section w3-padding" type="submit">Login</button>
+					</div>
+				</form>
+
+				<div class="w3-container w3-padding-16 w3-black">
+					<button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-btn w3-red">Cancel</button>
+					<span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+</body>
+
+</html>
